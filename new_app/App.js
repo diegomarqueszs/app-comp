@@ -36,27 +36,44 @@ export default function App() {
 
   }
   
+  function verificaNumero(){
+    if(count<10){
+      return (<Text> É menor que 10</Text>);
+    }else if(count===10){
+      return (<Text> É igual a 10</Text>);
+    }else{
+      return (<Text> É maior que 10</Text>);
+    }
+  }
+
 
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Hello <Text style={styles.hightlight}>World!</Text></Text>
       <Component />
       <StatusBar style="auto" />
-      {/*<Text style={styles.title}>{count}</Text>
+      <Text style={styles.title}>{count}</Text>
+      {/*{count<10 && <Text> É menor que 10</Text>}
+      {count===10 && <Text> É igual a 10</Text>}
+      {count>10 && <Text> É maior que 10</Text>}
+      */}
+      {verificaNumero()}
       <TouchableOpacity onPress={handleIncrement}> 
         <Text>Adicionar</Text> 
       </TouchableOpacity>
-      */}
-      {people.map((item)=>
+      
+
+    {/*people.map((item)=>
         <TouchableOpacity key = { item.id } onPress = {() => handleRemovePeople (item.id)}> 
           <Text style={styles.item} >{item.name}</Text>
         </TouchableOpacity>
         
-      )}
+    )}
 
       <TouchableOpacity onPress={handleAddNewPeople}> 
         <Text>Adicionar Pessoas</Text> 
       </TouchableOpacity>
+    */}
     </View>
   );
 }
