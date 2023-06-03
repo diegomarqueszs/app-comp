@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView, Text, TouchableOpacity } from 'react-native';
-import React, { useEffect, useState } from 'react';
 
-
+import InitScreen from './src/views/InitScreen';
 
 export default function App() {
 
+  {/*
   const [aux, setAux] = useState(false);
 
   useEffect(() => {
@@ -14,15 +14,17 @@ export default function App() {
 
   useEffect(() => {
     console.log('Teste');
-  },[aux]);
+  },[aux]);*/}
 
 
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar style="auto" />
-      <TouchableOpacity style={styles.button} onPress={()=> setAux(!aux)}>
+      {/*<TouchableOpacity style={styles.button} onPress={()=> setAux(!aux)}>
         <Text style={styles.title}>Switch</Text> 
-      </TouchableOpacity>
+      </TouchableOpacity>*/}
+
+      <InitScreen />
     </SafeAreaView>
   );
 }
