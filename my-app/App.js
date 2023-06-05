@@ -1,7 +1,9 @@
+import 'react-native-gesture-handler';
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, SafeAreaView, Text, TouchableOpacity } from 'react-native';
 
-import InitScreen from './src/views/InitScreen';
+import Stack from './src/routes/Stack';
 
 export default function App() {
 
@@ -24,7 +26,7 @@ export default function App() {
         <Text style={styles.title}>Switch</Text> 
       </TouchableOpacity>*/}
 
-      <InitScreen />
+      <Stack />
     </SafeAreaView>
   );
 }
@@ -32,9 +34,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,//indica que a tela pode crescer e diminuir
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
   title: {
     fontSize: 22,
